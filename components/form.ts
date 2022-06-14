@@ -1,6 +1,6 @@
 import { state } from "../src/state";
-export function form(){
-    class Form extends HTMLElement{
+    
+    customElements.define("form-el",class extends HTMLElement{
         shadow = this.attachShadow({mode: "open"});
         constructor(){
             super();
@@ -126,6 +126,4 @@ export function form(){
             `;
             this.shadow.appendChild(style);
         }
-    }
-    customElements.define("form-el", Form);
-}
+    } );

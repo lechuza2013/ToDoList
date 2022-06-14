@@ -1,8 +1,7 @@
 export const state = {
     data: {
       list: [{
-        pendiente: "cagar",
-        completed: true
+        
       }
     ],
   },

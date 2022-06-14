@@ -16,6 +16,7 @@ import { state } from "../src/state";
             console.log("Soy el render de list",updatedList);
             // EL CSS DEL SHADOW
             var style = document.createElement("style");
+            const imgURL = require("url:../components/delete.svg");
             //ACA ENTRA EL CSS
             style.textContent = `
             @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
@@ -45,7 +46,6 @@ import { state } from "../src/state";
                 width: 25px;
                 border: none;
                 background-color: #FFF599;
-                background-image: url("/delete.3dc2c69c.svg");
                 background-repeat: no-repeat;
                 background-position: center;
                 cursor: pointer;
@@ -117,6 +117,7 @@ import { state } from "../src/state";
                 const pendient = this.shadow.getElementById(updatedList.indexOf(element)) as HTMLElement;
                 //Botón para eliminar la pendiente
                 const removePendientButton = this.shadow.getElementById("button"+updatedList.indexOf(element)) as HTMLElement;
+                removePendientButton.style.backgroundImage = imgURL;
                 removePendientButton.addEventListener("click",()=>{
                     // if (confirm("Estas seguro?")) { //Confirmación en caso de arrepentimiento
                     // }

@@ -1,5 +1,4 @@
-export function header(){
-    class Header extends HTMLElement{
+    customElements.define("header-el", class extends HTMLElement{
         shadow = this.attachShadow({mode: "open"});
         constructor(){
             super();
@@ -30,6 +29,4 @@ export function header(){
             `;
             this.shadow.appendChild(style);
         }
-    }
-    customElements.define("header-el", Header);
-}
+    });
