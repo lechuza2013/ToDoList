@@ -1,8 +1,6 @@
 import { state } from "../src/state";
-export function list(){
     class List extends HTMLElement{
         shadow = this.attachShadow({mode: "open"});
-        
         constructor(){
             super();
             this.render();
@@ -133,4 +131,3 @@ export function list(){
         }
     }
     customElements.define("list-el", List);
-}
